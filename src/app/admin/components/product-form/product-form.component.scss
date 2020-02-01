@@ -11,8 +11,11 @@
   display: block;
   margin: 5px 0;
 }
-
+.mat-card-actions {
+  margin: auto 10px;
+}
 .row {
+  margin: auto 10px;
   display: flex;
   flex-direction: row;
 }
@@ -25,3 +28,4 @@
 .col:last-child {
   margin-right: 0;
 }
+
