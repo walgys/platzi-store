@@ -1,6 +1,9 @@
 {
-  "extends": "tslint:recommended",
+  "extends": [
+    "tslint:latest"
+  ],
   "rules": {
+    "prettier": true,
     "array-type": false,
     "arrow-parens": false,
     "deprecation": {
@@ -70,6 +73,14 @@
     "quotemark": [
       true,
       "single"
+    ],
+    "no-submodule-imports": [
+      true,
+      "zone.js",
+      "rxjs",
+      "@angular",
+      "ts-md5/dist/md5",
+      "ionic-angular/gestures/gesture"
     ],
     "trailing-comma": false,
     "no-conflicting-lifecycle": true,
