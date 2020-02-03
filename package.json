@@ -28,6 +28,13 @@
     "tslib": "^1.10.0",
     "zone.js": "~0.9.1"
   },
+  "prettier": {
+    "singleQuote": true,
+    "printWidth": 100,
+    "semi": true,
+    "bracketSpacing": true,
+    "arrowParens": "always"
+  },
   "devDependencies": {
     "@angular-devkit/build-angular": "~0.803.23",
     "@angular/cli": "~8.3.23",

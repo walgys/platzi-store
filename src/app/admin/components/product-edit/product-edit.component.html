@@ -1,0 +1,57 @@
+<form [formGroup]="formgroup">
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title>
+        Producto
+      </mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <div class="row">
+        <div class="col-xs">
+          <mat-form-field>
+            <input formControlName="id" placeholder="Id" matInput type="text" />
+          </mat-form-field>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs">
+          <mat-form-field>
+            <input formControlName="title" placeholder="Title" matInput type="text" />
+          </mat-form-field>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs">
+          <mat-form-field>
+            <input formControlName="price" placeholder="Price" matInput type="number" />
+          </mat-form-field>
+          <div *ngIf="priceField.errors && formgroup.get('price').dirty">
+            <p *ngIf="priceField.hasError('price_invalid')">
+              No puedes pasarte de 10.000
+            </p>
+            <p *ngIf="priceField.hasError('required')">
+              El campo es requerido
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs">
+          <mat-form-field>
+            <input formControlName="image" placeholder="Image" matInput type="text" />
+          </mat-form-field>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs">
+          <mat-form-field>
+            <input formControlName="description" placeholder="Description" matInput type="text" />
+          </mat-form-field>
+        </div>
+      </div>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-raised-button type="submit" (click)="saveProduct($event)">Submit</button>
+    </mat-card-actions>
+  </mat-card>
+</form>
